@@ -1,0 +1,270 @@
+@font-face {
+  font-family: Lato;
+  font-weight: 400;
+  src: url("../fonts/Lato/lato-regular-webfont.woff2") format("woff2");
+}
+
+body {
+  max-width: 1320px;
+  margin: auto;
+  background-color: #f5f5f5;
+}
+
+.main-wrapper {
+  display: flex;
+}
+
+.main-wrapper__first {
+  width: 34%;
+  padding-top: 81px;
+  padding-bottom: 174px;
+}
+
+.main-wrapper__first h1 {
+  padding: 0 0 20px;
+  margin: 0;
+  font-family: Lato;
+  font-size: 2.25em;
+}
+
+.accent {
+  width: 100%;
+  height: 4px;
+  padding: 0 0 20px;
+}
+
+.accent::after {
+  bottom: 0;
+  left: 0;
+  display: block;
+  width: 90px;
+  height: 4px;
+  content: "";
+  background: black;
+}
+
+.main-wrapper__first h2 {
+  padding: 20px 0;
+  margin: 0 0 20px;
+  font-family: Lato;
+  font-size: 1.75em;
+  font-weight: 400;
+  color: #353535;
+  text-align: right;
+}
+
+.main-wrapper__first p {
+  width: 309px;
+  padding: 15px 0;
+  margin: 0 0 30px;
+  font-size: 1em;
+  text-align: center;
+}
+
+.info {
+  width: 310px;
+  height: 316px;
+  margin: 0 auto 206px;
+}
+
+.socials {
+  width: 266px;
+  height: 45px;
+  margin: auto;
+}
+
+.socials__list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.socials__item {
+  width: 45px;
+  height: 45px;
+}
+
+.socials__icon {
+  transition: ease 0.2s;
+}
+
+.socials__icon:hover {
+  cursor: pointer;
+  fill: #726e6e;
+  transition: ease 0.2s;
+}
+
+.linkedin {
+  fill: #0077b5;
+}
+
+.email {
+  border-radius: 99px;
+}
+
+.main-nav {
+  display: flex;
+  justify-content: center;
+  width: 327px;
+  height: 241px;
+  margin-left: auto;
+}
+
+.main-nav__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.main-nav__item {
+  width: inherit;
+  height: inherit;
+}
+
+.main-nav__link {
+  display: block;
+  width: inherit;
+  height: auto;
+  padding: 21px 0;
+  font-family: Lato;
+  font-size: 1.44em;
+  font-weight: 400;
+  color: #000;
+  text-align: center;
+  cursor: pointer;
+  transition: ease 0.2s;
+}
+
+.main-nav__link:not(.main-nav__active):hover {
+  color: #727272;
+  background-color: #ddd;
+  transition: ease 0.2s;
+}
+
+.main-nav__active {
+  color: #f5f5f5;
+  background-color: #1d1d1d;
+}
+
+.main-wrapper__second {
+  position: relative;
+  width: 66%;
+  color: #fffbfb;
+  background-color: #1d1d1d;
+}
+
+.main-wrapper__second__background {
+  position: static;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 420px;
+  margin-bottom: 20px;
+  background-image: url(../images/rutgersImg.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.main-wrapper__second h3 {
+  position: relative;
+  z-index: 3;
+  margin: 87px auto 106px;
+  font-family: merriweather;
+  font-size: 5.31em;
+  font-style: italic;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+}
+
+.site {
+  position: relative;
+  z-index: 3;
+  display: grid;
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-columns: repeat(5, 1fr);
+  grid-row-gap: 20px;
+  grid-column-gap: 20px;
+  width: 550px;
+  height: 530px;
+  margin: auto;
+}
+
+.site__description h4 {
+  margin: 0;
+  text-align: center;
+}
+
+.site__description h4::after {
+  display: inline-block;
+  width: 68px;
+  height: 2px;
+  margin: 0 5px 5px;
+  content: "";
+  background: #d9d9d9;
+}
+
+.site__description p {
+  margin: 6px 0;
+  text-align: center;
+}
+
+.site__title {
+  grid-row: 1/2;
+  grid-column: 1/6;
+  padding-top: 28px;
+  margin: 0;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.site__blurb {
+  grid-row: 2/3;
+  grid-column: 1/6;
+  margin: 0;
+}
+
+.description__half_first {
+  grid-row: 3;
+  grid-column: 1/4;
+}
+
+.description__half_second {
+  grid-row: 3;
+  grid-column: 4/6;
+}
+
+.site__button {
+  grid-row: 4;
+  grid-column: 2/5;
+  height: 44px;
+  padding-top: 10px;
+}
+
+.site__button button {
+  width: 100%;
+  height: 44px;
+  font-family: Lato;
+  font-size: 1em;
+  text-align: center;
+  background-color: #f5f5f5;
+  border-style: none;
+  transition: ease 0.2s;
+}
+
+.site__button button:hover {
+  cursor: pointer;
+  background-color: #ddd;
+  transition: ease 0.2s;
+}
+/*# sourceMappingURL=style.css.map */
