@@ -12,7 +12,9 @@ Use a better box model (opinionated).
 *,
 ::before,
 ::after {
+	/* flex-grow: 1; */
 	box-sizing: border-box;
+	position: relative;
 }
 
 /**

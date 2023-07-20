@@ -26,4 +26,26 @@ function portfolio_register_scripts(){
 }
 
 add_action( 'wp_enqueue_scripts', 'portfolio_register_scripts' );
+
+//Seperate menu generation function due to wanting active page to have black background
+function gen_main_nav_list() {
+    $all_page_ids_original = get_all_page_ids();
+    echo(count($all_page_ids_original));
+    count($all_page_ids_original) > 1 ? $all_page_ids = usort($all_page_ids_original) : $all_page_ids = $all_page_ids_original;
+    $current_page_title = get_the_title();
+
+    if (count($all_page_ids) > 0) {
+        echo("<div class='main-nav__list'>");
+            foreach ($all_page_ids as $page) {
+                $page_title = get_the_title($page);
+                $page_permalink = get_permalink($page);
+                $active_modifier = '';
+                $current_page_title == $page_title ? $active_modifier = 'main-nav__active' : $active_modifier = '';
+                
+                echo("<a class='main-nav__link main-nav__work {$active_modifier}' href='{$page_permalink}'>{$page_title}</a>");
+            }
+        echo("</div>");
+    }
+}
+
 ?>
