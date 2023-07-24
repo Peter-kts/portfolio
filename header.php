@@ -11,8 +11,8 @@
     <meta name="author" content="https://youtube.com/FollowAndrew">
     <link rel="shortcut icon" href="images/logo.png">
     <?php 
-            wp_head();
-        ?>
+        wp_head();
+    ?>
 </head>
 
 <body>
